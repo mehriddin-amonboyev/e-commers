@@ -12,6 +12,9 @@ export const productData = [
         price: 120,
         discount: 0,
         image: img1,
+        size:["Small", "Medium","Large","X-Large"],
+        color:["white", "Red", "Blue"],
+        
     },
     {
         id: 2,
@@ -21,6 +24,9 @@ export const productData = [
         price: 260,
         discount: 20,
         image: img2,
+        size:["Small", "Medium","Large","X-Large"],
+        color:["white", "Red", "Blue"],
+        
     },
     {
         id: 3,
@@ -30,6 +36,9 @@ export const productData = [
         price: 180,
         discount: 0,
         image: img3,
+        size:["Small", "Medium","Large","X-Large"],
+        color:["white", "Red", "Blue"],
+        
     },
     {
         id: 4,
@@ -39,6 +48,9 @@ export const productData = [
         price: 160,
         discount: 30,
         image: img4,
+        size:["Small", "Medium","Large","X-Large"],
+        color:["white", "Red", "Blue"],
+        
     },
     {
         id: 5,

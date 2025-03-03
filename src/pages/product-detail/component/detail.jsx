@@ -1,8 +1,17 @@
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import ProductColorPicker from "./productColorPicker";
 import ProductSizePicker from "./productSizePicker";
+import { addProductList } from "../../../store/slices/cartSlice";
+import { MinusIcon } from "../../../assets/svg/minusIcon";
+import { PlusIcon } from "../../../assets/svg/plusIcon";
 
 export const Detail = ({ product }) => {
-    console.log(product);
+    const dispatch = useDispatch();
+
+    const addToCart = () => {
+        dispatch(addProductList(product))
+    }
 
     return (
         <>
@@ -47,6 +56,18 @@ export const Detail = ({ product }) => {
                     <h4 className="pt-[24px] font-normal text-base text-[rgba(0,0,0,0.6)]">Choose Size</h4>
                     <ProductSizePicker />
                     <div className="mt-[24px] border border-[rgba(0,0,0,0.1)] w-[590px]"></div>
+                    <div className="flex gap-[20px]">
+                        <div className="flex gap-[38px] py-[16px] px-[20px] bg-[#f0f0f0] rounded-[62px]">
+                            <button ><MinusIcon /></button>
+                            <h2 >1</h2>
+                            <button ><PlusIcon /></button>
+                        </div>
+                        <button onClick={() => addToCart(addProductList())} className="py-[16px] px-[54px] w-full bg-[#000] rounded-[62px]">
+                            <span className="font-medium text-base text-[#fff]">
+                                Add to Cart
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </section>
         </>

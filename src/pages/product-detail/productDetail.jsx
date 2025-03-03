@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom"
-import { NotFound } from "../NotFound/notFound";
 import { productData } from "../../data";
 import { Detail } from "./component/detail";
+import { NotFound } from "../NotFound/notFound";
 
 export const ProductDetail = () => {
     const { id } = useParams();
     if (!productData.some((item) => item.id == id)) {
-        return <NotFound />
+        return <NotFound/>
     }
     return (
         <div className="container">
