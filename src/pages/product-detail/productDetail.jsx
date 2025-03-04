@@ -2,15 +2,14 @@ import { useParams } from "react-router-dom"
 import { productData } from "../../data";
 import { Detail } from "./component/detail";
 import { NotFound } from "../NotFound/notFound";
+import { useGetProducts } from "../home/service/query/useGetProduct";
 
 export const ProductDetail = () => {
     const { id } = useParams();
-    if (!productData.some((item) => item.id == id)) {
-        return <NotFound/>
-    }
+    const { data, isLoading } = useGetProducts();
     return (
         <div className="container">
-            {productData.map((item) => item.id == id &&
+            {data?.map((item) => item.id == id &&
                 <Detail key={item.id} product={item} />
             )}
         </div>

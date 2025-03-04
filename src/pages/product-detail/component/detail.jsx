@@ -6,7 +6,7 @@ import { addProductList } from "../../../store/slices/cartSlice";
 import { MinusIcon } from "../../../assets/svg/minusIcon";
 import { PlusIcon } from "../../../assets/svg/plusIcon";
 
-export const Detail = ({ product }) => {
+export const Detail = ({product}) => {
     const dispatch = useDispatch();
 
     const addToCart = () => {
@@ -29,8 +29,8 @@ export const Detail = ({ product }) => {
                     </div>
                 </div>
                 <div className="w-[50%]">
-                    <h2 className="font-bold text-[40px] text-[#000]">{product.name}</h2>
-                    <p>{product.rating}</p>
+                    <h2 className="font-bold text-[40px] text-[#000]">{product.title}</h2>
+                    {/* <p>{product.rating.rate}</p> */}
                     <div className="font-bold text-[32px] text-[#000] pt-[14px]">
                         {product.discount ? (
                             <div className="flex gap-[12px] items-center">

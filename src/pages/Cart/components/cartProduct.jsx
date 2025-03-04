@@ -11,9 +11,15 @@ export const CartProduct = (product) => {
                 </div>
                 <div className="flex justify-between w-full">
                     <div>
-                        <h2 className="font-bold text-[20px] text-[#000]">{product.name}</h2>
-                        <p className="font-bold text-[20px] text-[#000]">Size: {product.size[3]}</p>
-                        <p className="font-bold text-[20px] text-[#000]">Color: {product.color[2]}</p>
+                        <h2 className="font-bold text-[20px] text-[#000]">{product.title}</h2>
+                        {/* <p className="font-normal text-[14px] text-[#000]">
+                            Size:
+                            <span className="text-[rgba(0,0,0,0.6)]">{product.size[3]}</span>
+                        </p>
+                        <p className="font-normal text-[14px] text-[#000]">
+                            Color:
+                            <span className="text-[rgba(0,0,0,0.6)]">{product.color[2]}</span>
+                        </p> */}
                         <p className="font-bold text-[20px] text-[#000]">${product.price}</p>
                     </div>
                     <div className="relative">

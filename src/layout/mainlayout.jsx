@@ -3,14 +3,14 @@ import { Header } from "./header/header"
 
 export const MainLayout = () => {
     return (
-        <>
+        < div className="flex flex-col min-h-screen">
             <header>
                 <Header />
             </header>
             <Outlet />
             <footer>
-                salom footer
+                footer
             </footer>
-        </>
+        </div>
     )
 }
